@@ -4,12 +4,12 @@ This task was required as part of a job application and revolves around creating
 Postcode data is of the following format:
 |row_id	| postcode |
 |-------|----------|
-|1		| BD3 4NN |
-|2		| BD20 2BR |
+|1		  | BD3 4NN  |
+|2		  | BD20 2BR |
 
 The actual download of postcodes (import_data.csv) had approx. 2 million postcodes, to reduce filesizes I have uploaded a sample of 300,000:
 
-# NHS Task Instructions - Readme
+# Task Instructions - Readme
 
 ## Pre-requisites
 My Python code was run in the following environment(s):
@@ -18,7 +18,7 @@ My Python code was run in the following environment(s):
 
 ## Running the python script: 
 
-set PYTHONPATH=%PYTHONPATH%;F:\Projects\NHS\test
+set PYTHONPATH=%PYTHONPATH%;<PATH_TO_GIT_PROJECT>/
 
 ### Executing Part 1  
 To run unit tests for the postcode test data perform the following:
@@ -46,7 +46,6 @@ cd <ROOT_PATH_OF_SCRIPTS>
 python3 ./validate_postcode_part2.py   
 
 The "failed_validation.csv" is output to the root of the script.  
-
   
 ### Executing Part 3
 Perform the following commands:  
