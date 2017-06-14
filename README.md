@@ -2,10 +2,10 @@
 This task was required as part of a job application and revolves around creating unit tests to validate a regular expression that in itself validates postcodes.
 
 Postcode data is of the following format:  
-| row_id | postcode |  
-| ----- | --------- |  
-| 1 | BD3 4NN  |  
-| 2 | BD20 2BR |  
+|row_id	| postcode |  
+|-------|----------|  
+|1		| BD3 4NN  |  
+|2		| BD20 2BR |  
 
 The actual download of postcodes (import_data.csv) had approx. 2 million postcodes, to reduce filesizes I have uploaded a sample of 300,000:
 
