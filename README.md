@@ -4,7 +4,7 @@ This task was required as part of a job application and revolves around creating
 Postcode data is of the following format:
 |row_id	| postcode |
 |-------|----------|
-|1		| BD3 4NN |
+|1		| BD3 4NN  |
 |2		| BD20 2BR |
 
 The actual download of postcodes (import_data.csv) had approx. 2 million postcodes, to reduce filesizes I have uploaded a sample of 300,000:
@@ -16,14 +16,21 @@ My Python code was run in the following environment(s):
 * Linux Ubuntu 14.04.1, using Python 3.4.
 * Windows 10, using Python 3.6.
 
-## Running the python script: 
+## Running the python scripts: 
 
-set PYTHONPATH=%PYTHONPATH%;F:\Projects\NHS\test
+### Set the environment variable
+
+In Windows:  
+set PYTHONPATH=%PYTHONPATH%;<PATH_TO_PROJECT>  
+
+In Linux:  
+export PYTHONPATH=$PYTHONPATH:<PATH_TO_PROJECT>
 
 ### Executing Part 1  
 To run unit tests for the postcode test data perform the following:
 
 cd <ROOT_PATH_OF_SCRIPTS>  
+<Set env variable as above>
 python3 ./validate_postcode_part1.py
   
 #### General Notes  

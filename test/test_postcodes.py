@@ -43,125 +43,126 @@ UnitTestPostcodeData = [ ["$%± ()()",   False,            "Junk"                
 # Define unit tests:
 class TestPostCodeRegEx(unittest.TestCase):
     def setUp (self):
-        self.postcode = Postcode(app.postcode.regular_expression)
+        self.postcode = Postcode()
+        self.postcode.loadRegex(app.postcode.regular_expression)
 
     def test_junk_postcode (self):
         expectedResult = UnitTestPostcodeData[0][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[0][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[0][0])
         self.assertEqual(result,expectedResult)
 
     def test_invalid_postcode (self):
         expectedResult = UnitTestPostcodeData[1][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[1][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[1][0])
         self.assertEqual(result,expectedResult)
 
     def test_incorrect_inward_code_length (self):
         expectedResult = UnitTestPostcodeData[2][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[2][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[2][0])
         self.assertEqual(result,expectedResult)
     def test_no_space (self):
         expectedResult = UnitTestPostcodeData[3][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[3][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[3][0])
         self.assertEqual(result,expectedResult)
 
     def test_q_in_first_position (self):
         expectedResult = UnitTestPostcodeData[4][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[4][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[4][0])
         self.assertEqual(result,expectedResult)
 
     def test_v_in_first_position (self):
         expectedResult = UnitTestPostcodeData[5][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[5][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[5][0])
         self.assertEqual(result,expectedResult)
 
     def test_x_in_first_position (self):
         expectedResult = UnitTestPostcodeData[6][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[6][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[6][0])
         self.assertEqual(result,expectedResult)
 
     def test_i_in_first_position (self):
         expectedResult = UnitTestPostcodeData[7][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[7][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[7][0])
         self.assertEqual(result,expectedResult)
 
     def test_j_in_first_position (self):
         expectedResult = UnitTestPostcodeData[8][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[8][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[8][0])
         self.assertEqual(result,expectedResult)
 
     def test_z_in_first_position (self):
         expectedResult = UnitTestPostcodeData[9][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[9][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[9][0])
         self.assertEqual(result,expectedResult)
 
     def test_q_in_first_position (self):
         expectedResult = UnitTestPostcodeData[10][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[10][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[10][0])
         self.assertEqual(result,expectedResult)
 
     def test_c_in_first_position (self):
         expectedResult = UnitTestPostcodeData[11][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[11][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[11][0])
         self.assertEqual(result,expectedResult)
 
     def test_area_with_single_digit_districts (self):
         expectedResult = UnitTestPostcodeData[12][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[12][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[12][0])
         self.assertEqual(result,expectedResult)
 
     def test_area_with_double_digit_districts (self):
         expectedResult = UnitTestPostcodeData[13][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[13][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[13][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode1 (self):
         expectedResult = UnitTestPostcodeData[14][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[14][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[14][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode2 (self):
         expectedResult = UnitTestPostcodeData[15][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[15][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[15][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode3 (self):
         expectedResult = UnitTestPostcodeData[16][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[16][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[16][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode4 (self):
         expectedResult = UnitTestPostcodeData[17][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[17][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[17][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode5 (self):
         expectedResult = UnitTestPostcodeData[18][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[18][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[18][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode6 (self):
         expectedResult = UnitTestPostcodeData[19][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[19][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[19][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode7 (self):
         expectedResult = UnitTestPostcodeData[20][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[20][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[20][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode8 (self):
         expectedResult = UnitTestPostcodeData[21][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[21][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[21][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode9 (self):
         expectedResult = UnitTestPostcodeData[22][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[22][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[22][0])
         self.assertEqual(result,expectedResult)
 
     def test_valid_postcode10 (self):
         expectedResult = UnitTestPostcodeData[23][1]
-        result = self.postcode.TestPostCode(UnitTestPostcodeData[23][0])
+        result = self.postcode.testPostCode(UnitTestPostcodeData[23][0])
         self.assertEqual(result,expectedResult)
 
 if __name__ == '__main__':
