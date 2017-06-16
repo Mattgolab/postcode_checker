@@ -16,21 +16,23 @@ from app.postcode import Postcode
 INPUT_CSV_FILE = "data/import_data.csv"
 OUTPUT_CSV_FILE = "output/failed_validation.csv"
 
-""" Import XML postcode file, test the postcode for validity.
-    If it fails, output the postcode to a .csv file.           """
+# Import CSV postcode file, test the postcode for validity.
+# If it fails, output the postcode to a .csv file.
 def ImportAndTest (postcodeObj):
     postcodeObj.setFieldNames(['row_id','postcode'])
     # Open a CSV file reader object:
     csvReaderObj = postcodeObj.openCSVFileReader(INPUT_CSV_FILE, 'rt', 'utf-8')
     # Open a CSV file writer:
     csvWriterObj = postcodeObj.openCSVFileWriter(OUTPUT_CSV_FILE, 'w')
-    
+
+    # Read the CSV file, line by line into a dict: 
     index = 0
     for row in csvReaderObj:
         retrievedPostcode = row['postcode']
         rowID = row['row_id']
         #Don't check the first row as this contains the csv header:
         if index is not 0:
+            # Validate the postcode, if it fails write it to a csv file:
             result = postcodeObj.testPostCode(retrievedPostcode)
             if result == False:
                 csvWriterObj.writerow({'row_id': rowID, 'postcode': retrievedPostcode})

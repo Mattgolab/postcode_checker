@@ -4,8 +4,8 @@ This task was required as part of a job application and revolves around creating
 Postcode data is of the following format:  
 |row_id	| postcode |  
 |-------|----------|  
-|1		| BD3 4NN  |  
-|2		| BD20 2BR |  
+|1      | BD3 4NN  |
+|2      | BD20 2BR |
 
 The download of postcodes resides in data/import_data.csv and consists of 2 million postcodes.  
 

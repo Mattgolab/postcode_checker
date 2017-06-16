@@ -3,7 +3,7 @@
 # Author: Matthew Golab
 # Date: 14/06/17
 #
-# TDD test for job application task
+# TDD unit tests for Postcode class
 
 import unittest
 import app
@@ -30,22 +30,11 @@ class TestPostCodeClass(unittest.TestCase):
         postcode = self.postcode.ReadRow(5)
         self.assertEqual(postcode, "IP20 9DL")
 
-#    def test_reading_csv_fileSeek (self):
-#        self.postcode.openCSVFileReader(TDD_TEST_CSV_FILE, 'rt', 'utf-8')
-#        postcode = self.postcode.ReadRowSeek(3)
-#        self.assertEqual(postcode, "MK12 5EY")
-#        postcode = self.postcode.ReadRowSeek(5)
-#        self.assertEqual(postcode, "IP20 9DL")
-
     def test_file_does_not_exist (self):
         self.assertRaises(IOError, self.postcode.openCSVFileReader, TDD_TEST_ABSENT_FILE, 'rt', 'utf-8')
 
     def test_non_string_passed_openCSVFileReader (self):
-        return
-
-#    def test_writing_csv_file (self):
-#        postcode = self.postcode.WriteRow("BD1 3RJ")
-#        return
+        pass
 
 if __name__ == '__main__':
     unittest.main()
