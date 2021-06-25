@@ -1,5 +1,5 @@
 # postcode_checker
-This task was required as part of a job application and revolves around creating unit tests to validate a regular expression that in itself validates postcodes.
+This task revolves around creating unit tests to validate a regular expression that in itself validates postcodes.
 
 Postcode data is of the following format:  
 |row_id	| postcode |  
